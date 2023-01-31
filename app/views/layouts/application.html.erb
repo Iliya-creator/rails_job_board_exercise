@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsJobBoardExercise</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <% @job_postings.each do |job_posting| %>
+    <p> Company: </p>
+    <%= job_posting.company%>
+    <p> Postion: </p>
+    <%= job_posting.position%>
+    <p> Location: </p>
+    <%= job_posting.location%>
+    <% end %>
+  </body>
+</html>
